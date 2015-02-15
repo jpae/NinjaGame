@@ -3,9 +3,15 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     
+    @IBOutlet weak var totalKills: UILabel!
+    
+    var scene : GameScene!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let scene = GameScene(size: view.bounds.size)
+        scene = GameScene(size: view.bounds.size)
+        scene.controller = self
+
         let skView = view as SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
@@ -16,5 +22,9 @@ class GameViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    func gameUpdate(ninjagame: NinjaGame) {
+        totalKills.text = "\(ninjagame.score)"
     }
 }

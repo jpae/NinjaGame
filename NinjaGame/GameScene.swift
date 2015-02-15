@@ -53,6 +53,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let MAX_POWER : CGFloat = 400.0
     let MAX_DRAW : CGFloat = 200.0
     
+    var controller : GameViewController!
+    var ninjagame : NinjaGame!
+    
     let player = SKSpriteNode(imageNamed: "player")
     
     var degreeLabel : SKLabelNode?
@@ -63,11 +66,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var pathToDraw : CGMutablePath?
     var lineNode : SKShapeNode?
     
+    var monstersKilled : Int = 0
+    
     
     override func didMoveToView(view: SKView) {
-
-        backgroundColor = SKColor.whiteColor()
         var bgTexture = SKTexture(imageNamed: "background.png")
+        ninjagame = NinjaGame()
+        controller.gameUpdate(ninjagame)
+        
         //var bgImage = SKSpriteNode(texture: bgTexture)
         //TODO: Parallax scrolling, larger background to show projectile flying
         // Maybe start with moving the screen so the projectile is in the center
@@ -158,6 +164,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         lineNode = SKShapeNode()
         lineNode!.path = pathToDraw
         lineNode!.strokeColor = SKColor.redColor()
+        lineNode!.zPosition = 1.0
 
         self.addChild(lineNode!)
         self.addChild(powerLabel!)
@@ -201,7 +208,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-        println (PhysicsCategory.Ground)
         // 1 - Choose one of the touches to work with
         let touch = touches.anyObject() as UITouch
         touchEnd = touch.locationInNode(self)
@@ -255,11 +261,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func projectileDidCollideWithMonster(projectile:SKSpriteNode, monster:SKSpriteNode) {
         projectile.removeFromParent()
-
-        let actionScale = SKAction.scaleTo(0.0, duration: 1.0)
-        let actionScaleDone = SKAction.removeFromParent()
-
-        monster.runAction(SKAction.sequence([actionScale, actionScaleDone]))
+        monster.removeFromParent()
+        
+        ninjagame.increaseScore()
+        controller.gameUpdate(ninjagame)
     }
     
     func didBeginContact(contact: SKPhysicsContact) {

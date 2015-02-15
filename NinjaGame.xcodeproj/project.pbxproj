@@ -18,6 +18,7 @@
 		EABFB2A71A8EE1C400CF1D61 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = EABFB2A41A8EE1C400CF1D61 /* pew-pew-lei.caf */; };
 		EABFB2A81A8EE1C400CF1D61 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EABFB2A51A8EE1C400CF1D61 /* sprites.atlas */; };
 		EACD92531A904069001F3AC1 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EACD92521A904069001F3AC1 /* background.png */; };
+		EACD92551A907278001F3AC1 /* NinjaGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD92541A907278001F3AC1 /* NinjaGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		EABFB2A41A8EE1C400CF1D61 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		EABFB2A51A8EE1C400CF1D61 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
 		EACD92521A904069001F3AC1 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		EACD92541A907278001F3AC1 /* NinjaGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NinjaGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				EABFB27D1A8EE15500CF1D61 /* AppDelegate.swift */,
 				EABFB2811A8EE15500CF1D61 /* GameScene.swift */,
 				EABFB2831A8EE15500CF1D61 /* GameViewController.swift */,
+				EACD92541A907278001F3AC1 /* NinjaGame.swift */,
 				EABFB2851A8EE15500CF1D61 /* Main.storyboard */,
 				EABFB2881A8EE15500CF1D61 /* Images.xcassets */,
 				EABFB28A1A8EE15500CF1D61 /* LaunchScreen.xib */,
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACD92551A907278001F3AC1 /* NinjaGame.swift in Sources */,
 				EABFB2821A8EE15500CF1D61 /* GameScene.swift in Sources */,
 				EABFB2841A8EE15500CF1D61 /* GameViewController.swift in Sources */,
 				EABFB27E1A8EE15500CF1D61 /* AppDelegate.swift in Sources */,

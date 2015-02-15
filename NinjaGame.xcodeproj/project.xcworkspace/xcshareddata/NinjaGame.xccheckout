@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E01DFEDE-24D1-4722-842D-7AB70B7C92BE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NinjaGame</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C80598971970EF9F87FA385DECED437DB4D2CBBF</key>
+		<string>github.com:jpae/NinjaGame.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NinjaGame.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C80598971970EF9F87FA385DECED437DB4D2CBBF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:jpae/NinjaGame.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C80598971970EF9F87FA385DECED437DB4D2CBBF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C80598971970EF9F87FA385DECED437DB4D2CBBF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NinjaGame</string>
+		</dict>
+	</array>
+</dict>
+</plist>
